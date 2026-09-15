@@ -1,0 +1,60 @@
+[user]
+	name = Kevin Curtet
+	email = 3438361+kcurtet@users.noreply.github.com
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+
+[core]
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[merge]
+	conflictstyle = zdiff3
+[diff]
+	colorMoved = default
+[delta]
+	navigate = true
+	features = night
+
+# Nord (dark) — managed by ~/.local/bin/theme
+[delta "night"]
+	light = false
+	syntax-theme = Nord
+	line-numbers = true
+	line-numbers-left-format = "{nm:^4}⋮"
+	line-numbers-left-style = "#4C566A"
+	line-numbers-right-format = "{np:^4}│"
+	line-numbers-right-style = "#4C566A"
+	line-numbers-minus-style = "#BF616A"
+	line-numbers-plus-style = "#A3BE8C"
+	hunk-header-style = "line-number"
+	hunk-header-decoration-color = "#4C566A"
+	file-style = "bold #88C0D0 ul"
+	file-decoration-style = "#4C566A"
+
+# Nord light — palette matches onenord_light
+[delta "day"]
+	light = true
+	syntax-theme = OneHalfLight
+	line-numbers = true
+	line-numbers-left-format = "{nm:^4}⋮"
+	line-numbers-left-style = "#8B919C"
+	line-numbers-right-format = "{np:^4}│"
+	line-numbers-right-style = "#8B919C"
+	line-numbers-minus-style = "#A3454E"
+	line-numbers-plus-style = "#75905E"
+	hunk-header-style = "line-number"
+	hunk-header-decoration-color = "#ACB2BD"
+	file-style = "bold #3F5F7F ul"
+	file-decoration-style = "#ACB2BD"

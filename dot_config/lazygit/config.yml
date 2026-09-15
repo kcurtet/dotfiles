@@ -1,0 +1,15 @@
+# lazygit — diffs via delta (usa el par nord día/noche del script `theme`)
+git:
+  paging:
+    pager: delta --paging=never
+gui:
+  theme:
+    # nord9/nord8: legibles sobre fondo claro y oscuro
+    activeBorderColor:
+      - "#81A1C1"
+      - bold
+    searchingActiveBorderColor:
+      - "#88C0D0"
+      - bold
+os:
+  editPreset: nvim-remote

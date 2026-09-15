@@ -1,0 +1,3 @@
+# Estos archivos viven en el repo pero NO se aplican a $HOME
+README.md
+bootstrap.sh

@@ -1,0 +1,32 @@
+# Nord light (day theme) — palette matches NvChad "onenord_light"
+# Managed by ~/.local/bin/theme — do not edit, edit theme-nord-light.toml instead
+
+[window]
+decorations_theme_variant = "Light"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+background = "0xD8DEE9"
+foreground = "0x2A303C"
+
+[colors.normal]
+black = "0x272D39"
+red = "0xA3454E"
+green = "0x75905E"
+yellow = "0xB88339"
+blue = "0x3F5F7F"
+magenta = "0x8D6786"
+cyan = "0x5B7B9B"
+white = "0xDFDFE0"
+
+[colors.bright]
+black = "0xACB2BD"
+red = "0xAE5059"
+green = "0x809B69"
+yellow = "0xDEA95F"
+blue = "0x7191B1"
+magenta = "0x927DBD"
+cyan = "0x6181A1"
+white = "0xF4F4F4"

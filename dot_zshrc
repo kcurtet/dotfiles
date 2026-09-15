@@ -1,0 +1,39 @@
+[[ -f /usr/share/cachyos-zsh-config/cachyos-config.zsh ]] && source /usr/share/cachyos-zsh-config/cachyos-config.zsh
+
+# cat → bat (day/night theme via ~/.local/bin/theme)
+alias cat='bat --paging=never'
+
+# ── workflow agente-primero ───────────────────────────────────────────────
+# p <proyecto>: launcher — fzf → workspace de herdr con pi vivo (o lo crea)
+p() {
+  local proj dir ws out pane
+  proj=$(command find "$HOME/dev/nutux-labs" -maxdepth 1 -mindepth 1 -type d ! -name '.*' -printf '%f\n' \
+    | fzf --height=40% --layout=reverse --prompt='proyecto ▸ ') || return 0
+  dir="$HOME/dev/nutux-labs/$proj"
+
+  # ¿ya hay workspace? → saltar con j/k (navegación nativa de herdr)
+  ws=$(herdr workspace list 2>/dev/null | jq -r --arg n "$proj" '.result.workspaces[]? | select(.label==$n) | .workspace_id' | head -1)
+  if [[ -n "$ws" ]]; then
+    echo "▸ workspace '$proj' ya existe ($ws) — salta con j/k"
+    [[ "${HERDR_ENV:-0}" != 1 ]] && herdr
+    return 0
+  fi
+
+  out=$(herdr workspace create --cwd "$dir" --label "$proj" --focus 2>/dev/null) || { echo "✗ no pude crear el workspace"; return 1; }
+  pane=$(jq -r '.result.root_pane.pane_id // empty' <<<"$out")
+  if [[ -n "$pane" ]]; then
+    herdr agent start "${proj:0:32}" --kind pi --pane "$pane" --timeout 20000 -- -c >/dev/null 2>&1 \
+      && echo "▸ pi lanzado en '$proj' (retoma su última sesión)" \
+      || echo "▸ workspace '$proj' creado — lanza pi a mano en su pane"
+  else
+    echo "▸ workspace '$proj' creado"
+  fi
+  [[ "${HERDR_ENV:-0}" != 1 ]] && herdr
+}
+
+alias pc='pi --continue'   # retomar la última sesión del cwd
+alias pl='pi --resume'     # selector de sesiones
+alias lg='lazygit'         # revisión/staging de diffs (delta nord integrado)
+alias pq='npx -y quota-axi --full'  # cuota de proveedores antes de trabajos largos
+
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
