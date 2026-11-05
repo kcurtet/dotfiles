@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: React arrow component
+# key: rfca
+# --
+export const ${1:Component} = ($2) => {
+  return (
+    <div>$0</div>
+  )
+}

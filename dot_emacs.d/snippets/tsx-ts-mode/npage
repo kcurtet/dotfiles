@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: NextPage tipado
+# key: npage
+# --
+import type { NextPage } from "next"
+
+const ${1:Page}: NextPage = () => {
+  return (
+    <main>$0</main>
+  )
+}
+
+export default $1

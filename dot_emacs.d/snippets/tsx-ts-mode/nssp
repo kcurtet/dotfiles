@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: getServerSideProps
+# key: nssp
+# --
+export async function getServerSideProps() {
+  return {
+    props: {$0},
+  }
+}

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: zod schema
+# key: zobj
+# --
+import { z } from "zod"
+
+export const ${1:schema} = z.object({
+  $0
+})

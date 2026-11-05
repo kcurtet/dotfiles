@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tailwind: truncate multiline
+# key: tw-truncate
+# --
+line-clamp-${1:2}$0

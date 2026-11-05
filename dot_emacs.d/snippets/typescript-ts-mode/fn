@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: función tipada
+# key: fn
+# --
+function ${1:name}(${2:arg}: ${3:type}): ${4:void} {
+  $0
+}

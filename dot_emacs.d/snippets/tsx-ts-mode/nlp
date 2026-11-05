@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Next Link
+# key: nlp
+# --
+<Link href="${1:/}">$0</Link>

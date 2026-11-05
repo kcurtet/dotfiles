@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: useRef
+# key: uref
+# --
+const ${1:ref} = useRef<${2:HTMLDivElement}>($3)

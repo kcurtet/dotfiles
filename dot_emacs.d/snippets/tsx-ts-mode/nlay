@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: Next layout
+# key: nlay
+# --
+import type { ReactNode } from "react"
+
+export default function ${1:Layout}({ children }: { children: ReactNode }) {
+  return (
+    <div>$0{children}</div>
+  )
+}

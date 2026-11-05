@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Next API route handler
+# key: napi
+# --
+import type { NextApiRequest, NextApiResponse } from "next"
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  $0
+}

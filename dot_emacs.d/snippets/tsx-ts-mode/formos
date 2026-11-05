@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# key: formos
+# name: form onSubmit handler
+# --
+<form onSubmit={(e) => {
+  e.preventDefault()
+  $0
+}}>

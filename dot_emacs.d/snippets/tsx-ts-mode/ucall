@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: useCallback
+# key: ucall
+# --
+const ${1:fn} = useCallback(($2) => {
+  $0
+}, [${3:deps}])

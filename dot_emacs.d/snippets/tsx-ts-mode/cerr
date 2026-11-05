@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# key: cerr
+# name: console.error
+# --
+console.error($0)

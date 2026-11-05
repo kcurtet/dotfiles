@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# key: mapk
+# name: .map con key
+# --
+{${1:items}.map((item) => (
+  <${2:div} key={${3:item.id}}>$0</$2>
+))}

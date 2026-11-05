@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# key: hookn
+# name: custom hook file
+# --
+"use client"
+
+import { useState, useEffect } from "react"
+
+export function ${1:useThing}($2) {
+  const [state, setState] = useState($3)
+  useEffect(() => {
+    $0
+  }, [])
+  return { state, setState }
+}

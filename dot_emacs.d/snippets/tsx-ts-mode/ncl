@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: "use client"
+# key: ncl
+# --
+"use client"
+$0

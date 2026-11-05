@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# key: tclog
+# name: console.log con prefijo
+# --
+console.log("[${1:TAG}]", $0)

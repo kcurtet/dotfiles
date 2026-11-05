@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: async function
+# key: afn
+# --
+async function ${1:name}($2) {
+  $0
+}

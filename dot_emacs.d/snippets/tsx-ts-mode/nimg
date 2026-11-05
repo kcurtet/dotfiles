@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Next Image
+# key: nimg
+# --
+<Image src="${1:/img.png}" alt="${2:alt}" width={${3:600}} height={${4:400}} $0/>

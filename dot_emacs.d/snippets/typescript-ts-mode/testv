@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: vitest test
+# key: testv
+# --
+import { test, expect } from "vitest"
+
+test("${1:descripción}", () => {
+  $0
+})

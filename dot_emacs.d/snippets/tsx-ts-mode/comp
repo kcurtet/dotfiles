@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Component mínimo
+# key: comp
+# --
+export default function ${1:Component}() {
+  return (
+    <div>$0</div>
+  )
+}

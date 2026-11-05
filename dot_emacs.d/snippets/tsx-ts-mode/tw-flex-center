@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tailwind: flex center
+# key: tw-flex-center
+# --
+flex items-center justify-center$0
