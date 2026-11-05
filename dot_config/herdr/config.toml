@@ -1,0 +1,11 @@
+onboarding = false
+
+[keys]
+navigate_workspace_up = "k"
+navigate_workspace_down = "j"
+previous_workspace = "shift+alt+k"
+next_workspace = "shift+alt+j"
+next_agent = ["ctrl+alt+j"]
+previous_agent = ["ctrl+alt+k"]
+next_tab = ["alt+l"]
+previous_tab = ["alt+h"]
