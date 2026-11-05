@@ -1,0 +1,20 @@
+# Font: IBM Plex Mono + Nerd Font symbols fallback (fontconfig)
+font-family = IBM Plex Mono
+font-size = 14
+
+# Look
+theme = Catppuccin Mocha
+#background-opacity = 0.95
+bold-is-bright = false
+window-colorspace = srgb
+window-padding-x = 8
+window-padding-y = 8
+window-decoration = true
+
+# Behavior
+copy-on-select = clipboard
+confirm-close-surface = false
+mouse-hide-while-typing = true
+
+# Scrollback
+scrollback-limit = 100000
