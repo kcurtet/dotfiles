@@ -1,11 +1,21 @@
 onboarding = false
 
 [keys]
+# Ciclo de atención: lo más visitado, familia segura ctrl+alt
+next_agent = "ctrl+alt+j"
+previous_agent = "ctrl+alt+k"
+
+# Panes: horizontal directo, vertical via prefix+j/k
+focus_pane_left = ["prefix+h", "ctrl+alt+h"]
+focus_pane_right = ["prefix+l", "ctrl+alt+l"]
+
+# Tabs: metáfora horizontal, una mano
+previous_tab = ["prefix+p", "ctrl+alt+["]
+next_tab = ["prefix+n", "ctrl+alt+]"]
+
+# Workspaces: salto absoluto por posición del sidebar
+switch_workspace = "prefix+shift+1..9"
+
+# Navigate mode: vim
 navigate_workspace_up = "k"
 navigate_workspace_down = "j"
-previous_workspace = "shift+alt+k"
-next_workspace = "shift+alt+j"
-next_agent = ["ctrl+alt+j"]
-previous_agent = ["ctrl+alt+k"]
-next_tab = ["alt+l"]
-previous_tab = ["alt+h"]
